@@ -5,15 +5,17 @@
 }
 body{
     background-color: #222;
+    color:white;
 }
 #griglia{
     display:flex;
     margin:30px auto;
     flex-wrap: wrap;
-    width:300px;
+    width:900px;
 }
 .square{
-    width:100px;
-    height:100px;
+    width:90px;
+    height:90px;
+    padding:0.2rem;
     border: blue 1px solid;
 }
