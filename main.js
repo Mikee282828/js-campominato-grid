@@ -3,7 +3,7 @@ let griglia = document.getElementById("griglia");
 for(let i = 1; i <= 100; i++){
 
     // creo elemento e lo metto all'interno della griglia
-    let elemento = createSquare(i);
+    let elemento = createSquare();
     griglia.append(elemento);
 
     //al click fa cose...
@@ -11,10 +11,9 @@ for(let i = 1; i <= 100; i++){
 
 }
 
-function createSquare(nIterazione){
+function createSquare(){
     let element = document.createElement("div");
     element.classList.add("square");
-    element.append(nIterazione);
     return element;
 }
 
