@@ -12,4 +12,4 @@
 - il click stampa il numero
 - all'interno del ciclo creato in M #2 creo un eventlistener su "element" e ci aggiungo le funzioni descritto in precedenza
 # MILESTONE #4
-- raggrupo alcune funzionalità in funzioni
+- raggruppo alcune funzionalità in funzioni
