@@ -1,15 +1,18 @@
 let griglia = document.getElementById("griglia");
+let avvia = document.getElementById("avvia");
 
-for(let i = 1; i <= 100; i++){
+avvia.addEventListener("click",function(){
+    for(let i = 1; i <= 100; i++){
 
-    // creo elemento e lo metto all'interno della griglia
-    let elemento = createSquare();
-    griglia.append(elemento);
-
-    //al click fa cose...
-    clickPulsante(elemento,i);
-
-}
+        // creo elemento e lo metto all'interno della griglia
+        let elemento = createSquare();
+        griglia.append(elemento);
+    
+        //al click fa cose...
+        clickPulsante(elemento,i);
+    
+    }
+})
 
 function createSquare(){
     let element = document.createElement("div");
