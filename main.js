@@ -7,7 +7,7 @@ for(let i = 1; i <= 100; i++){
     griglia.append(elemento);
 
     //al click fa cose...
-    clickPulsante(elemento,i)
+    clickPulsante(elemento)
 
 }
 
@@ -18,9 +18,9 @@ function createSquare(nIterazione){
     return element;
 }
 
-function clickPulsante(element,nIterazione){
+function clickPulsante(element){
     element.addEventListener("click",function(){
         element.classList.toggle("bkg_azzurro");
-        console.log(nIterazione);
+        console.log(element.innerHTML);
     })
 }
