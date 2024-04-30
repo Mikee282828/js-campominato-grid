@@ -3,6 +3,7 @@ let avvia = document.getElementById("avvia");
 let gameMode = document.getElementById("gameMode");
 
 avvia.addEventListener("click",function(){
+    griglia.innerHTML="";
     if(gameMode.value=="Easy"){
         for(let i = 1; i <= 100; i++){
             // creo elemento e lo metto all'interno della griglia
