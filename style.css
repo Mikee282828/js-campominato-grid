@@ -13,9 +13,23 @@ body{
     flex-wrap: wrap;
     width:900px;
 }
-.square{
+.square100{
     width:90px;
     height:90px;
+    padding:0.2rem;
+    border: blue 1px solid;
+    cursor: pointer;
+}
+.square81{
+    width:calc(900px / 9);
+    height:calc(900px / 9);
+    padding:0.2rem;
+    border: blue 1px solid;
+    cursor: pointer;
+}
+.square49{
+    width:calc(900px / 7);
+    height:calc(900px / 7);
     padding:0.2rem;
     border: blue 1px solid;
     cursor: pointer;
