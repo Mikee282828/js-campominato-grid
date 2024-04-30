@@ -5,4 +5,8 @@ for(let i = 1; i <= 100; i++){
     element.classList.add("square");
     element.append(i);
     griglia.append(element);
+    element.addEventListener("click",function(){
+        element.classList.toggle("bkg_azzurro");
+        console.log(i);
+    })
 }

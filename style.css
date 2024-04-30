@@ -18,4 +18,8 @@ body{
     height:90px;
     padding:0.2rem;
     border: blue 1px solid;
+    cursor: pointer;
+}
+.bkg_azzurro{
+    background-color: lightskyblue;
 }
