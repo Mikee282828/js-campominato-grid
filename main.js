@@ -3,8 +3,10 @@ let avvia = document.getElementById("avvia");
 let gameMode = document.getElementById("gameMode");
 
 avvia.addEventListener("click",function(){
+    console.log("Reset");
     griglia.innerHTML="";
     if(gameMode.value=="Easy"){
+        console.log("La modalità selezionata è: Easy");
         for(let i = 1; i <= 100; i++){
             // creo elemento e lo metto all'interno della griglia
             let elemento = createSquare100();
@@ -13,6 +15,7 @@ avvia.addEventListener("click",function(){
             clickPulsante(elemento,i);
         }
     }else if(gameMode.value=="Medium"){
+        console.log("La modalità selezionata è: Medium");
         for(let i = 1; i <= 81; i++){
             // creo elemento e lo metto all'interno della griglia
             let elemento = createSquare81();
@@ -21,6 +24,7 @@ avvia.addEventListener("click",function(){
             clickPulsante(elemento,i);
         }
     }else if(gameMode.value=="Hard"){
+        console.log("La modalità selezionata è: Hard");
         for(let i = 1; i <= 49; i++){
             // creo elemento e lo metto all'interno della griglia
             let elemento = createSquare49();
