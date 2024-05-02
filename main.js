@@ -7,56 +7,30 @@ avvia.addEventListener("click",function(){
     griglia.innerHTML="";
     if(gameMode.value=="Easy"){
         console.log("La modalità selezionata è: Easy");
-        for(let i = 1; i <= 100; i++){
-            // creo elemento e lo metto all'interno della griglia
-            let elemento = createSquare100();
-            griglia.append(elemento);
-            //al click fa cose...
-            clickPulsante(elemento,i);
-        }
+        gridGenerator("square100",100);
     }else if(gameMode.value=="Medium"){
         console.log("La modalità selezionata è: Medium");
-        for(let i = 1; i <= 81; i++){
-            // creo elemento e lo metto all'interno della griglia
-            let elemento = createSquare81();
-            griglia.append(elemento);
-            //al click fa cose...
-            clickPulsante(elemento,i);
-        }
+        gridGenerator("square81",81);
     }else if(gameMode.value=="Hard"){
         console.log("La modalità selezionata è: Hard");
-        for(let i = 1; i <= 49; i++){
-            // creo elemento e lo metto all'interno della griglia
-            let elemento = createSquare49();
-            griglia.append(elemento);
-            //al click fa cose...
-            clickPulsante(elemento,i);
-        }
+        gridGenerator("square49",49);
     }
-
 })
 
-function createSquare100(){
+function createSquare(classe,nIterazione){
     let element = document.createElement("div");
-    element.classList.add("square100");
-    return element;
-}
-
-function createSquare81(){
-    let element = document.createElement("div");
-    element.classList.add("square81");
-    return element;
-}
-
-function createSquare49(){
-    let element = document.createElement("div");
-    element.classList.add("square49");
-    return element;
-}
-
-function clickPulsante(element,nIterazione){
+    element.classList.add(classe);
+    // click
     element.addEventListener("click",function(){
         element.classList.toggle("bkg_azzurro");
         console.log(nIterazione);
     })
+    return element;
+}
+function gridGenerator(classe,nSquare){
+    for(let i = 1; i <= nSquare; i++){
+        // creo elemento e lo metto all'interno della griglia
+        let elemento = createSquare(classe,i);
+        griglia.append(elemento);
+    }
 }
